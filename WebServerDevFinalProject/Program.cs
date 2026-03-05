@@ -1,7 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using WebServerDevFinalProject.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// This is needed to register the StudentContext with the dependency injection container,
+// allowing us to inject it into our controllers and other services.
+builder.Services.AddDbContext<HobbyContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("HobbyContext")));
 
 var app = builder.Build();
 

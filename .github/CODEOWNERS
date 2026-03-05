@@ -1,0 +1,7 @@
+# CODEOWNERS file for the repository
+# Format: <pattern> <owner(s)>
+# Owners can be individual users (e.g. @username) or teams (e.g. @org/team-name)
+
+# Owners that will be Notified if someone opens a pull request, GitHub automatically requests reviews from the code owners
+* @jonathansoriano @jaxonconiglio @Agricocw
+
