@@ -1,0 +1,34 @@
+﻿@model List<Christopher>
+@{
+    ViewBag.Title = "Hobbies";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Hobby ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Environment</th>
+            <th>Skill Level</th>
+            <th>Hobby Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var hobby in Model)
+        {
+            <tr>
+                <td>@hobby.ChristopherId</td>
+                <td>@hobby.HobbyName</td>
+                <td>@hobby.Category</td>
+                <td>@hobby.Description</td>
+                <td>@hobby.Environment</td>
+                <td>@hobby.SkillLevel</td>
+                <td>@hobby.HobbyAge</td>
+            </tr>
+        }
+    </tbody>
+</table>
