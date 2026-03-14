@@ -13,6 +13,8 @@ namespace WebServerDevFinalProject.Models
 
         public DbSet<Jaxon> Jaxon { get; set; }
 
+        public DbSet<Christopher> Christopher { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -22,6 +24,11 @@ namespace WebServerDevFinalProject.Models
             modelBuilder.Entity<Jon>().HasData(
                 new Jon { JonId = 1, HobbyName = "Hot Wheel Collecting", Category = "Automotive", Description = "I collect sporty Hot Wheel Cars.", Environment = "Indoor", SkillLevel = "Beginner", HobbyAge = 15},
                 new Jon { JonId = 2, HobbyName = "Playing First Shooter Games", Category = "Gaming", Description = "I like to play first shooter games like Call of Duty on the weekends", Environment = "Indoor", SkillLevel = "Intermediate", HobbyAge = 5 }
+            );
+
+            modelBuilder.Entity<Christopher>().HasData(
+                new Christopher { ChristopherId = 1, HobbyName = "Traveling", Category = "Lifestyle", Description = "I enjoy traveling to new places and experiencing different cities and cultures.", Environment = "Outdoor", SkillLevel = "Beginner", HobbyAge = 3},
+                new Christopher { ChristopherId = 2, HobbyName = "Working Out", Category = "Fitness", Description = "I enjoy going to the gym and staying active through exercise.", Environment = "Indoor", SkillLevel = "Intermediate", HobbyAge = 4 }
             );
 
             modelBuilder.Entity<Jaxon>().HasData(
